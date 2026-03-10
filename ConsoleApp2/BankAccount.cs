@@ -1,13 +1,16 @@
 ﻿using System;
 namespace BankAccountNS
     {
-        /// <summary>
-        /// Программа по учету операций на банковских счетах(дебит и кредит)
-        /// <summary>;
-        /// <param name="debit">Снятие денежных средств со счета</param>
-        /// <param name="credit">Поступление денежных средств на счет</param>
-        /// <return>Баланс банковского счета</return>
-        public class BankAccount
+    /// <summary>
+    /// Программа по учету операций на банковских счетах(дебит и кредит)
+    /// <summary>;
+    /// <param name="debit">Снятие денежных средств со счета</param>
+    /// <param name="credit">Поступление денежных средств на счет</param>
+    /// <exeption cref="ArgumentOutOfRangeException">Ограничевает вывод средств больше чем баланс на счету</exeption>
+    /// <exeption cref="ArgumentOutOfRangeException">Ограничевает вывод средств менее чем 0</exeption>
+    /// <exeption cref="ArgumentOutOfRangeException">Ограничевает пополнение средств менее чем 0</exeption>
+    /// <return>Баланс банковского счета</return>
+    public class BankAccount
         {
             private readonly string m_customerName;
             private double m_balance;
