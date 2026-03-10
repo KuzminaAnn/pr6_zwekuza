@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 namespace BankAccountNS
     {
     /// <summary>
@@ -12,6 +13,9 @@ namespace BankAccountNS
     /// <return>Баланс банковского счета</return>
     public class BankAccount
         {
+            public const string DebitAmountExceedsBalanceMessage = "Debit amount exceedsbalance";
+            public const string DebitAmountLessThanZeroMessage = "Debit amount is less thanzero";
+            public const string CreditAmountLessThanZeroMessage = "Debit amount is less thanzero";
             private readonly string m_customerName;
             private double m_balance;
             private BankAccount() { }
@@ -32,19 +36,19 @@ namespace BankAccountNS
             {
                 if (amount > m_balance)
 {
-                    throw new ArgumentOutOfRangeException("amount");
+                    throw new ArgumentOutOfRangeException("amount", amount, DebitAmountExceedsBalanceMessage);
                 }
                 if (amount < 0)
 {
-                    throw new ArgumentOutOfRangeException("amount");
+                    throw new ArgumentOutOfRangeException("amount", amount, DebitAmountLessThanZeroMessage);
                 }
-                m_balance += amount;
+                m_balance -= amount;
             }
             public void Credit(double amount)
             {
                 if (amount < 0)
 {
-                    throw new ArgumentOutOfRangeException("amount");
+                    throw new ArgumentOutOfRangeException("amount", amount, CreditAmountLessThanZeroMessage);
                 }
 
                 m_balance += amount;
