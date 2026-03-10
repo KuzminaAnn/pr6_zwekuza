@@ -10,4 +10,4 @@
 При своем запуске приложение выводит значение счета пользователя с учетом
 уже указанных данных в коде программы.
 
-![фото выполнения кода](https://github.com/KuzminaAnn/pr6_zwekuza/ConsoleApp2/images/1.png)
+![фото выполнения кода](https://github.com/KuzminaAnn/pr6_zwekuza/blob/master/ConsoleApp2/images/1.png)
