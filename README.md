@@ -9,4 +9,5 @@
 
 При своем запуске приложение выводит значение счета пользователя с учетом
 уже указанных данных в коде программы.
-![фото выполнения кода](https://github.com/KuzminaAnn/pr6_zwekuza/raw/ветка/путь/фото.png)
+
+![фото выполнения кода](https://github.com/KuzminaAnn/pr6_zwekuza/raw/ConsoleApp2/images/1.png)
